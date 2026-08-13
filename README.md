@@ -1,39 +1,42 @@
 # Premier League Title Race Forecast
 
-A data-driven analysis and simulation of the 2026/27 Premier League title race.
+An educational Python project that simulates the 2026/27 Premier League title race.
 
 ## Objective
 
-This project estimates each team's probability of winning the 2026/27 Premier League using historical league performance, confirmed transfer activity, pre-season results and the published fixture list.
+Estimate each team's probability of winning the Premier League using previous-season performance and a Monte Carlo match simulation.
 
 ## Method
 
-The model will combine:
+The model:
 
-- Recent Premier League performance
-- Goals scored, goals conceded and goal difference
-- Home and away performance
-- Confirmed signings and departures
-- Pre-season results, given a lower weighting
-- 2026/27 fixture difficulty
-- Monte Carlo season simulation
+- Uses 2025/26 league points per game as the baseline for returning Premier League teams.
+- Includes Coventry City, Ipswich Town and Hull City as promoted teams, using conservative assumed Premier League points-per-game baselines.
+- Applies higher uncertainty to promoted teams and teams with a new manager.
+- Simulates a full home-and-away league season across all 20 teams.
+- Includes a simplified home-advantage assumption.
+- Repeats the season simulation thousands of times and records the champion in each run.
 
-## Key question
+## Initial model result
 
-Which teams are most likely to win the 2026/27 Premier League title?
+The current simulation identifies Arsenal as the leading title favourite, followed by Manchester City and Manchester United.
 
-## Important limitation
+The exact probabilities are generated in the notebook and can change when assumptions or inputs are updated.
 
-This is an educational forecasting project, not a guarantee or betting recommendation. Football outcomes can change because of injuries, tactical changes, transfers, fixture changes and random events.
+## Limitations
 
-## Tools
+This is an educational forecasting project, not betting advice.
+
+The current version does not fully model injuries, future transfers, individual players, tactical changes, fixture timing, European competition, or real match-level expected-goals data. Results represent the model’s assumptions, not certain predictions.
+
+## Tools used
 
 - Python
 - pandas
 - NumPy
 - matplotlib
-- requests
+- Google Colab
 
-## Status
+## Run the project
 
-In progress — collecting and validating data as of August 2026.
+Open `01_title_race_forecast.ipynb` in Google Colab and run all cells.
